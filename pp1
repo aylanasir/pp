@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayla Nasir | Floral Notebook Portfolio</title>
+  <meta name="description" content="Ayla Nasir — Chemical Engineering and Bioengineering student at McMaster University, working across water treatment research, engineering design, and accessible technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#332619; --muted:#796b5d; --brown:#513b2c; --rust:#a96332; --sage:#61765a; --mint:#cbd5bb; --rose:#c98a9c; --lavender:#b3a1cf; --gold:#c98a3e; --cream:#fbf7ef; --sand:#f1e7d6; --line:#e2d3bc; --display:'Fraunces',serif; --body:'Manrope',sans-serif; --mono:'DM Mono',monospace; --max:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.65 var(--body); -webkit-font-smoothing:antialiased; }
+    body::before { content:""; position:fixed; inset:0; z-index:-1; opacity:.4; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23b3a1cf' stroke-width='1.1' stroke-linecap='round' opacity='.16'%3E%3Cpath d='M20 24l3 7 7 3-7 3-3 7-3-7-7-3 7-3z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23c98a9c' stroke-width='1.1' stroke-linecap='round' opacity='.15'%3E%3Ccircle cx='100' cy='40' r='3'/%3E%3Ccircle cx='118' cy='55' r='3'/%3E%3Ccircle cx='108' cy='70' r='3'/%3E%3Cpath d='M100 40l18 15M118 55l-10 15'/%3E%3C/g%3E%3Cg fill='none' stroke='%2361765a' stroke-width='1' opacity='.14'%3E%3Cpath d='M35 105q6-9 12 0t12 0'/%3E%3C/g%3E%3C/svg%3E"); }
+    a { color:inherit; text-decoration:none; }
+    ::selection { background:var(--mint); color:var(--brown); }
+    .wrap { max-width:var(--max); margin:auto; padding-left:24px; padding-right:24px; }
+    header { position:sticky; top:0; z-index:5; background:rgba(251,247,239,.9); border-bottom:1px solid var(--line); backdrop-filter:blur(12px); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; }
+    .logo { display:flex; align-items:center; gap:9px; color:var(--brown); font:700 1.05rem var(--display); }
+    .logo svg { width:23px; }
+    nav { display:flex; align-items:center; gap:25px; }
+    nav a, .mono { font:500 .75rem var(--mono); }
+    nav a { color:var(--muted); }
+    nav a:hover { color:var(--rust); }
+    .nav-cta, .button.primary { background:var(--brown); color:white; border-radius:7px; padding:10px 16px; }
+    .nav-cta:hover, .button.primary:hover { background:var(--rust); color:white; }
+    .menu { display:none; border:0; background:transparent; padding:8px; cursor:pointer; }
+    .menu span { display:block; width:22px; height:2px; margin:4px; background:var(--brown); }
+    section { padding:110px 24px; max-width:var(--max); margin:auto; }
+    #intro { min-height:calc(100vh - 72px); display:flex; flex-direction:column; justify-content:center; padding-top:72px; }
+    .eyebrow { display:flex; align-items:center; gap:10px; color:var(--sage); font:italic 500 1.05rem var(--display); margin-bottom:18px; }
+    .eyebrow::before { content:""; width:26px; height:1px; background:var(--sage); }
+    .status { display:inline-flex; align-items:center; gap:8px; width:max-content; padding:7px 13px; margin-bottom:26px; border:1px solid var(--line); border-radius:999px; color:var(--brown); background:var(--sand); font:.73rem var(--mono); }
+    .dot { width:7px; height:7px; border-radius:50%; background:var(--rose); box-shadow:0 0 0 3px rgba(201,138,156,.22); }
+    h1,h2,h3,h4 { color:var(--brown); font-family:var(--display); line-height:1.15; margin:0; }
+    h1 { max-width:16ch; font-size:clamp(2.5rem,6vw,4.5rem); }
+    h1 em { color:var(--rust); font-style:normal; background:linear-gradient(transparent 68%, #f0cdd6 68%); }
+    .hero-copy { max-width:55ch; margin:24px 0 0; color:var(--muted); font-size:1.05rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:34px; }
+    .button { display:inline-flex; align-items:center; gap:8px; border:1px solid transparent; padding:12px 20px; border-radius:7px; font:.78rem var(--mono); transition:.2s ease; }
+    .button:hover { transform:translateY(-2px); }
+    .button.ghost { border-color:var(--line); }
+    .button.ghost:hover { border-color:var(--rust); color:var(--rust); }
+    .stats { display:flex; flex-wrap:wrap; gap:38px; margin-top:62px; color:var(--muted); font:.73rem var(--mono); }
+    .stats strong { display:block; color:var(--brown); font:700 1.35rem var(--display); }
+    .divider { max-width:var(--max); margin:auto; padding:0 24px; }
+    .divider svg { display:block; width:100%; height:28px; }
+    .about { display:grid; grid-template-columns:280px 1fr; gap:64px; }
+    .profile { height:max-content; padding:22px; border:1px solid var(--line); border-radius:14px; background:linear-gradient(150deg,var(--sand),white); position:sticky; top:100px; }
+    .portrait { display:grid; place-items:center; aspect-ratio:4/5; margin-bottom:17px; border-radius:10px; color:white; text-align:center; font:.7rem var(--mono); background:linear-gradient(145deg,var(--rose),var(--brown) 55%,var(--sage)); }
+    .info { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-top:1px solid var(--line); font-size:.82rem; }
+    .info:first-of-type { border-top:0; }
+    .info small { color:var(--muted); font: .68rem var(--mono); text-transform:uppercase; }
+    .info span:last-child { text-align:right; }
+    .about h2 { max-width:22ch; font-size:clamp(1.8rem,3.5vw,2.7rem); margin-bottom:25px; }
+    .about p, .timeline p, .project p { color:var(--muted); max-width:64ch; }
+    .about p em { color:var(--brown); font-style:normal; font-weight:700; }
+    .now { list-style:none; padding:0; margin:34px 0 0; }
+    .now li { display:flex; gap:12px; padding:11px 0; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    .now li::before { content:""; flex:0 0 7px; width:7px; height:7px; margin-top:9px; border-radius:50%; background:var(--sage); }
+    .tools { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:40px; }
+    .tools strong, .label { display:block; margin-bottom:11px; color:var(--sage); font:.7rem var(--mono); text-transform:uppercase; letter-spacing:.05em; }
+    .chips { display:flex; flex-wrap:wrap; gap:7px; list-style:none; padding:0; margin:0; }
+    .chips li { padding:5px 10px; border:1px solid var(--line); border-radius:999px; background:white; font-size:.78rem; }
+    .section-title { display:flex; justify-content:space-between; align-items:end; margin-bottom:50px; }
+    .section-title h2 { font-size:clamp(1.9rem,4vw,2.8rem); }
+    .timeline { border-left:2px solid var(--line); padding-left:34px; }
+    .role { position:relative; padding-bottom:46px; }
+    .role:last-child { padding-bottom:0; }
+    .role::before { content:""; position:absolute; left:-41px; top:4px; width:10px; height:10px; border:2px solid var(--sage); border-radius:50%; background:var(--cream); }
+    .meta, .project-meta { display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font:.68rem var(--mono); text-transform:uppercase; }
+    .meta span { padding:3px 9px; border:1px solid var(--line); border-radius:999px; background:var(--sand); }
+    .role h3 { margin:11px 0 5px; font-size:1.25rem; }
+    .org { color:var(--sage); }
+    .role ul { padding-left:18px; margin:0; color:var(--muted); font-size:.88rem; }
+    .sub { margin-top:68px; }
+    .education { padding:22px 26px; border:1px solid var(--line); border-radius:12px; background:var(--sand); }
+    .education h3 { font-size:1.15rem; }
+    .education p { margin:5px 0 0; color:var(--muted); font:.76rem var(--mono); }
+    .projects { display:grid; gap:24px; }
+    .project { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; border:1px solid var(--line); border-radius:15px; background:white; transition:.25s ease; }
+    .project:hover { transform:translateY(-3px); box-shadow:0 18px 40px -24px rgba(81,59,44,.4); }
+    .project-art { min-height:240px; display:grid; place-items:center; background:linear-gradient(145deg,var(--brown),var(--lavender) 58%,var(--sage)); }
+    .project-body { display:flex; flex-direction:column; padding:30px; }
+    .project-meta { margin-bottom:14px; }
+    .project-meta .active { color:var(--sage); }
+    .project h3 { font-size:1.35rem; margin-bottom:7px; }
+    .tagline { color:var(--brown); font-weight:700; font-size:.9rem; }
+    .project p { margin:13px 0 18px; font-size:.87rem; }
+    .project-body .chips { margin-bottom:21px; }
+    .project-links { display:flex; gap:18px; margin-top:auto; font:.72rem var(--mono); }
+    .project-links a { color:var(--brown); border-bottom:1px solid var(--mint); }
+    .project-links a:hover { color:var(--rose); }
+    .more { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .more article { padding:19px; border:1px solid var(--line); border-radius:11px; background:var(--sand); }
+    .more h4 { margin:7px 0 4px; font-size:1rem; }
+    .more p { margin:0; color:var(--muted); font-size:.8rem; }
+    #contact { text-align:center; padding-top:95px; padding-bottom:130px; }
+    #contact .eyebrow { justify-content:center; }
+    #contact h2 { max-width:18ch; margin:0 auto 18px; font-size:clamp(2rem,4.8vw,3.4rem); }
+    #contact .lead { max-width:51ch; margin:0 auto 35px; color:var(--muted); }
+    .socials { display:flex; justify-content:center; gap:25px; margin-top:48px; color:var(--muted); font:.73rem var(--mono); }
+    footer { border-top:1px solid var(--line); padding:28px 24px; color:var(--muted); font:.7rem var(--mono); }
+    .footer { max-width:var(--max); margin:auto; display:flex; justify-content:space-between; gap:12px; }
+    .reveal { opacity:0; transform:translateY(16px); transition:opacity .65s ease,transform .65s ease; }
+    .reveal.in { opacity:1; transform:none; }
+    @media (max-width:820px) { .about { grid-template-columns:1fr; gap:35px; } .profile { position:static; } .project { grid-template-columns:1fr; } .more { grid-template-columns:1fr; } }
+    @media (max-width:680px) { section { padding:78px 20px; } .wrap { padding-left:20px; padding-right:20px; } nav { display:none; } .menu { display:block; } nav.open { position:absolute; top:71px; left:0; right:0; display:flex; flex-direction:column; align-items:stretch; gap:0; padding:13px 20px 20px; border-bottom:1px solid var(--line); background:var(--cream); } nav.open a { padding:9px 0; } .nav-cta { text-align:center; margin-top:5px; } .tools { grid-template-columns:1fr; gap:22px; } .stats { gap:22px; } .footer { flex-direction:column; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .reveal { opacity:1; transform:none; transition:none; } .project,.button { transition:none; } }
+    /* Dark-green editorial scrapbook redesign */
+    :root {
+      --ink:#20221d; --muted:#626456; --brown:#173f32; --rust:#275b45;
+      --sage:#55745e; --mint:#c5d0b7; --rose:#a9b995; --lavender:#d7cfb5;
+      --gold:#b99554; --cream:#f6edcf; --sand:#e9dfbf; --line:#b9ae8f;
+      --display:'Fraunces',serif; --body:'Manrope',sans-serif;
+    }
+    body { background:#f6edcf; background-image:radial-gradient(rgba(32,34,29,.08) .7px,transparent .7px); background-size:6px 6px; }
+    body::before { opacity:.26; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E"); mix-blend-mode:multiply; }
+    header { background:rgba(246,237,207,.93); border-bottom:3px double var(--brown); box-shadow:0 3px 0 rgba(23,63,50,.08); }
+    .logo { font-size:1.2rem; letter-spacing:.04em; }
+    .logo svg { transform:rotate(-8deg); }
+    nav a { color:var(--brown); }
+    .nav-cta,.button.primary { border:1px solid #0d2f24; border-radius:2px; background:var(--brown); box-shadow:4px 4px 0 #b99554; }
+    .nav-cta:hover,.button.primary:hover { background:#275b45; box-shadow:2px 2px 0 #b99554; }
+    section { position:relative; }
+    #intro { max-width:none; min-height:calc(100vh - 72px); padding-left:max(24px,calc((100vw - 1120px)/2 + 24px)); padding-right:max(24px,calc((100vw - 1120px)/2 + 24px)); overflow:hidden; color:#fff9e6; background:linear-gradient(125deg,#0f382b 0%,#174a38 58%,#0d3025 100%); border-bottom:12px solid #1f211e; }
+    #intro::before { content:""; position:absolute; width:390px; height:500px; right:max(5vw,calc((100vw - 1120px)/2)); top:12%; background:linear-gradient(#ede3c4,#d6c89e); border:12px solid #f5ebcb; outline:2px solid #b99554; box-shadow:14px 17px 0 rgba(7,25,19,.42); transform:rotate(3deg); }
+    #intro::after { content:"AN"; position:absolute; right:max(12vw,calc((100vw - 920px)/2)); top:25%; width:220px; aspect-ratio:1; display:grid; place-items:center; color:var(--brown); font:italic 700 5rem var(--display); background:#f6edcf; border:18px double #173f32; box-shadow:0 0 0 8px #e5d7b2,0 0 0 10px #b99554; transform:rotate(-4deg); }
+    #intro>* { position:relative; z-index:1; max-width:620px; }
+    #intro .status { color:#f6edcf; border:1px solid rgba(246,237,207,.5); background:rgba(246,237,207,.09); }
+    #intro .dot { background:#d3b468; box-shadow:0 0 0 3px rgba(211,180,104,.25); }
+    h1 { color:#fff8df; font-family:var(--body); font-weight:700; letter-spacing:-.06em; text-transform:lowercase; }
+    h1 em { color:#f6edcf; font-family:var(--display); font-style:italic; text-transform:none; background:linear-gradient(transparent 72%,rgba(185,149,84,.55) 72%); }
+    .hero-copy,#intro .stats { color:#e2dac0; }
+    #intro .stats strong { color:#fff8df; }
+    #intro .button.ghost { color:#fff8df; border-color:#d8cba4; background:rgba(255,255,255,.04); }
+    .divider { max-width:none; height:84px; padding:0; background-color:#222522; background-image:linear-gradient(45deg,#f6edcf 25%,transparent 25%),linear-gradient(-45deg,#f6edcf 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f6edcf 75%),linear-gradient(-45deg,transparent 75%,#f6edcf 75%); background-size:84px 84px; background-position:0 0,0 42px,42px -42px,-42px 0; border-block:3px solid #b99554; }
+    .divider svg { display:none; }
+    .eyebrow { color:var(--brown); font-family:var(--display); font-size:1.2rem; }
+    .eyebrow::before { height:3px; background:var(--gold); }
+    h2,h3,h4 { color:var(--brown); }
+    #about { padding-top:125px; }
+    #about::before { content:"AYLA'S ENGINEERING NOTEBOOK • VOL. 01"; position:absolute; top:42px; left:50%; translate:-50% 0; padding:7px 22px; white-space:nowrap; font:.66rem var(--mono); letter-spacing:.12em; color:#f6edcf; background:var(--brown); transform:rotate(-1deg); box-shadow:4px 4px 0 var(--gold); }
+    .profile { border:0; border-radius:0; background:#e3d7b7; box-shadow:8px 9px 0 rgba(32,34,29,.2); transform:rotate(-1.2deg); }
+    .profile::before { content:"AYLA / 2026"; position:absolute; z-index:2; left:18px; top:-13px; padding:5px 11px; color:#f6edcf; background:var(--brown); font:.56rem var(--mono); letter-spacing:.12em; transform:rotate(-1deg); }
+    .portrait { position:relative; overflow:hidden; border:10px solid #f8f0d7; border-radius:0; background:linear-gradient(145deg,#294f3d,#132e25); box-shadow:2px 3px 8px rgba(0,0,0,.25); font-size:0; }
+    .portrait::before { content:"AN"; position:absolute; inset:0; display:grid; place-items:center; color:#f6edcf; text-align:center; font:italic 600 4.2rem/1 var(--display); }
+    .portrait::after { content:"PORTRAIT TO COME • CHEM ENG + BIOENG"; position:absolute; bottom:18px; inset-inline:10px; color:#d9cda8; text-align:center; font:.5rem var(--mono); letter-spacing:.09em; }
+    .tools { padding:34px; background:#222522; background-image:linear-gradient(45deg,rgba(246,237,207,.055) 25%,transparent 25%),linear-gradient(-45deg,rgba(246,237,207,.055) 25%,transparent 25%); border:7px solid #f2e7c8; outline:2px solid var(--brown); box-shadow:10px 11px 0 #b99554; }
+    .tools strong { color:#d9c28a; }
+    .tools .chips li { color:#f6edcf; background:#314136; border-color:#77816e; border-radius:2px; }
+    #experience { max-width:none; padding-left:max(24px,calc((100vw - 1120px)/2 + 24px)); padding-right:max(24px,calc((100vw - 1120px)/2 + 24px)); background:#173f32; color:#f6edcf; border-block:10px double #d6c393; }
+    #experience h2,#experience h3,#experience h4 { color:#fff8df; }
+    #experience .eyebrow,#experience .org,#experience .label { color:#d9c28a; }
+    #experience .timeline { border-left:3px solid #d9c28a; }
+    #experience .role::before { border-color:#d9c28a; background:#173f32; }
+    #experience .role p,#experience .role ul,#experience .more p { color:#d9d3bc; }
+    #experience .meta span { color:#173f32; background:#efe4c5; border:0; border-radius:1px; transform:rotate(-1deg); }
+    .education,#experience .more article { border:0; border-radius:0; background:#f3e9cc; box-shadow:6px 7px 0 #b99554; }
+    #experience .education h3,#experience .more h4 { color:#173f32; }
+    #experience .education p,#experience .more p,#experience .more .mono { color:#626456; }
+    #projects { padding-top:130px; }
+    #projects::before { content:"FROM MY PROJECT NOTEBOOK / SELECTED WORK"; position:absolute; top:45px; right:24px; font:.65rem var(--mono); letter-spacing:.12em; color:var(--brown); border-bottom:1px solid var(--brown); }
+    .projects { gap:50px; }
+    .project { overflow:visible; border:0; border-radius:0; background:#eee4c7; box-shadow:10px 11px 0 rgba(23,63,50,.2); }
+    .project:nth-child(even),.project:nth-child(odd) { transform:none; }
+    .project:hover { transform:translateY(-5px) rotate(0); box-shadow:13px 15px 0 rgba(23,63,50,.24); }
+    .project:first-child::before { content:""; position:absolute; z-index:2; width:104px; height:27px; top:-13px; left:42%; background:rgba(185,149,84,.62); transform:rotate(-2deg); }
+    .project-art { position:relative; margin:24px; min-height:300px; background:#173f32; border:10px solid #faf2da; outline:1px solid #766d58; box-shadow:5px 6px 0 rgba(0,0,0,.18); }
+    .project-art::after { content:"ARCHIVE / 0" counter(project); position:absolute; bottom:12px; right:14px; color:#e8d8ae; font:.57rem var(--mono); letter-spacing:.15em; }
+    .projects { counter-reset:project; }
+    .project { counter-increment:project; }
+    .project-body { padding:35px 40px 35px 20px; }
+    .project-meta span { padding:3px 8px; color:#f6edcf; background:var(--brown); }
+    .project-meta .active { color:#f6edcf; background:#55745e; }
+    .tagline { font-family:var(--display); font-size:1rem; }
+    .chips li { background:#faf3dc; border-color:#a89d80; border-radius:2px; }
+    .project-links a { border-bottom:2px solid var(--gold); font-weight:600; }
+    #projects>.sub .more article { position:relative; border:1px solid #a89d80; border-radius:0; background:#eee4c7; box-shadow:4px 5px 0 var(--brown); }
+    #projects>.sub .more { grid-template-columns:minmax(0,1fr); max-width:720px; }
+    #contact { max-width:none; background:#222522; color:#f6edcf; border-top:70px solid transparent; border-image:repeating-linear-gradient(45deg,#f6edcf 0 30px,#222522 30px 60px) 70; }
+    #contact h2 { color:#fff8df; }
+    #contact .eyebrow { color:#d9c28a; }
+    #contact .lead,#contact .socials { color:#d8d2ba; }
+    #contact::before,#contact::after { content:"✦"; position:absolute; top:72px; color:#b99554; font-size:3rem; }
+    #contact::before { left:8%; } #contact::after { right:8%; }
+    footer { color:#e6ddc4; background:#173f32; border-top:3px double #b99554; }
+    @media (max-width:900px) { #intro::before { right:-120px; opacity:.34; } #intro::after { right:-25px; opacity:.36; } #intro>* { max-width:650px; } }
+    @media (max-width:820px) { .profile { transform:none; } .project,.project:nth-child(even),.project:nth-child(odd) { transform:none; } .project-body { padding:28px; } .project-art { margin-bottom:0; } }
+    @media (max-width:680px) { nav.open { background:#f6edcf; } #intro { padding-top:92px; padding-bottom:90px; } #intro::before { width:260px; height:330px; top:35%; right:-130px; } #intro::after { width:135px; right:-25px; top:44%; font-size:3rem; border-width:10px; } #intro .hero-copy { max-width:85%; } .divider { height:55px; background-size:55px 55px; background-position:0 0,0 27.5px,27.5px -27.5px,-27.5px 0; } #about::before { max-width:86%; white-space:normal; text-align:center; } .tools { padding:24px; box-shadow:6px 7px 0 #b99554; } #projects::before { left:20px; right:auto; } .project::before { left:34%; } #contact::before,#contact::after { display:none; } }
+
+    /* Maroon social-editorial direction */
+    :root { --ink:#2f211d; --muted:#705d53; --brown:#6f0715; --rust:#8b1825; --sage:#8b1825; --mint:#dbc7a7; --rose:#6f0715; --lavender:#b6a28b; --gold:#c5a979; --cream:#ab9981; --sand:#e3d1b1; --line:#c6b38f; --display:'Manrope',sans-serif; --body:'Manrope',sans-serif; --mono:'Manrope',sans-serif; --max:1120px; }
+    body { color:var(--ink); background:#aa9880; background-image:none; font-family:var(--body); }
+    body::before { display:none; }
+    h1,h2,h3,h4,.logo { font-family:var(--body); letter-spacing:-.045em; }
+    header { top:14px; width:min(92%,1120px); margin:0 auto; border:0; border-radius:999px; color:#f7ead2; background:#710916; box-shadow:none; backdrop-filter:none; }
+    .nav { min-height:58px; padding-inline:24px; }
+    .logo,nav a { color:#f7ead2; }
+    .logo svg { display:none; }
+    nav { gap:10px; }
+    nav a { padding:8px 13px; border-radius:999px; font-size:.7rem; font-weight:600; }
+    nav a:hover { color:#710916; background:#ead8b8; }
+    .nav-cta,.button.primary { color:#710916; background:#f0dfc0; border:0; border-radius:999px; box-shadow:none; font-weight:700; }
+    .nav-cta:hover,.button.primary:hover { color:#fff4df; background:#8c1825; box-shadow:none; }
+    section { max-width:1120px; margin:26px auto; padding:88px 58px; border-radius:36px; }
+    #intro { max-width:1120px; min-height:680px; margin:40px auto 26px; padding:92px 58px; color:#2f211d; background:#e4d2b2; border:0; border-radius:38px; overflow:hidden; }
+    #intro::before { content:""; position:absolute; width:40%; height:calc(100% - 64px); right:32px; top:32px; border:0; outline:0; border-radius:28px; background:linear-gradient(145deg,#790a18,#4c0710); box-shadow:none; transform:none; }
+    #intro::after { content:"AN"; right:calc(20% - 105px); top:50%; translate:0 -50%; width:210px; border:10px solid #e4d2b2; border-radius:50%; color:#f2dfbe; background:#710916; box-shadow:none; transform:none; font:700 4.5rem var(--body); letter-spacing:-.08em; }
+    #intro>* { max-width:54%; }
+    #intro .status { color:#6f0715; border:0; border-radius:999px; background:#d5bd99; font-size:.69rem; font-weight:700; }
+    #intro .dot { background:#710916; box-shadow:none; }
+    h1 { color:#3a2923; font-size:clamp(3rem,6vw,5.5rem); font-weight:800; line-height:.95; text-transform:none; }
+    h1 em { color:#710916; font-family:var(--body); font-style:normal; background:none; }
+    .hero-copy,#intro .stats { color:#6d584d; }
+    #intro .stats { gap:28px; }
+    #intro .stats strong { color:#710916; font-family:var(--body); font-size:1.45rem; }
+    .button { border-radius:999px; font-family:var(--body); font-weight:700; }
+    .divider { display:none; }
+    .eyebrow { color:#710916; font-family:var(--body); font-size:.72rem; font-style:normal; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow::before { width:18px; height:7px; border-radius:999px; background:#710916; }
+    #about { padding-top:88px; background:#dfcdae; }
+    #about::before,#projects::before { display:none; }
+    .about { grid-template-columns:320px 1fr; gap:46px; }
+    .profile { padding:14px; border:9px solid #710916; border-radius:30px; background:#ead9bb; box-shadow:none; transform:none; }
+    .profile::before { content:"@ayla.engineers"; left:24px; top:24px; padding:7px 12px; color:#f4e4c7; border-radius:999px; background:#710916; font:.62rem var(--body); font-weight:700; letter-spacing:0; transform:none; }
+    .portrait { border:0; border-radius:21px; background:linear-gradient(145deg,#850d1b,#560811); box-shadow:none; }
+    .portrait::before { color:#f2dfbe; font:800 4.4rem/1 var(--body); letter-spacing:-.08em; }
+    .portrait::after { content:"PHOTO COMING SOON"; color:#e1c9a4; font:.58rem var(--body); font-weight:700; letter-spacing:.12em; }
+    .info { border-color:#c2ac89; }
+    .info small { color:#710916; font-family:var(--body); font-weight:800; }
+    .about h2 { font-weight:800; }
+    .about p em { color:#710916; }
+    .now { display:grid; grid-template-columns:1fr; gap:9px; }
+    .now li { padding:13px 15px; border:0; border-radius:16px; background:#ead9bb; }
+    .now li::before { background:#710916; }
+    .personal-note { margin:26px 0 0; padding:18px 20px; color:#f7ead2 !important; border-radius:18px; background:#710916; font-size:.96rem; font-weight:600; }
+    .tools { padding:28px; border:0; outline:0; border-radius:26px; background:#710916; background-image:none; box-shadow:none; }
+    .tools strong { color:#e7d2ae; font-family:var(--body); font-weight:800; }
+    .tools .chips li { color:#3b2922; border:0; border-radius:999px; background:#e5d2b2; }
+    #experience { max-width:1120px; padding:88px 58px; color:#33231e; background:#e4d2b2; border:0; border-radius:36px; }
+    #experience h2,#experience h3,#experience h4 { color:#3a2822; }
+    #experience .eyebrow,#experience .org,#experience .label { color:#710916; }
+    #experience .timeline { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; padding:0; border:0; }
+    #experience .role { padding:25px; border:8px solid #710916; border-radius:26px; background:#ead9bb; }
+    #experience .role::before { display:none; }
+    #experience .role p,#experience .role ul { color:#6b574c; }
+    #experience .meta { gap:5px; }
+    #experience .meta span { color:#f4e4c7; border-radius:999px; background:#710916; transform:none; }
+    .education,#experience .more article { border:0; border-radius:22px; background:#ead9bb; box-shadow:none; }
+    #experience .education h3,#experience .more h4 { color:#3a2822; }
+    #experience .more { gap:14px; }
+    #projects { padding-top:88px; background:#dcc8a7; }
+    .projects { gap:18px; }
+    .project { overflow:hidden; border:8px solid #710916; border-radius:30px; background:#ead9bb; box-shadow:none; transform:none; }
+    .project:hover { transform:translateY(-4px); box-shadow:none; }
+    .project:first-child::before { display:none; }
+    .project-art { min-height:280px; margin:0; border:0; outline:0; border-radius:0; background:#710916; box-shadow:none; }
+    .project-art::after { color:#e9d4b1; font-family:var(--body); font-weight:700; }
+    .project-body { padding:32px; }
+    .project-meta span { border-radius:999px; background:#710916; }
+    .project h3 { font-size:1.5rem; font-weight:800; }
+    .tagline { font-family:var(--body); font-size:.92rem; }
+    .chips li { border:0; border-radius:999px; background:#d8c09a; }
+    #projects>.sub .more article { border:8px solid #710916; border-radius:26px; background:#ead9bb; box-shadow:none; }
+    #contact { max-width:1120px; padding:95px 58px; color:#f5e4c6; border:0; border-radius:36px; background:#710916; }
+    #contact h2 { color:#fff0d5; }
+    #contact .eyebrow { color:#e0c59d; }
+    #contact .eyebrow::before { background:#e0c59d; }
+    #contact .lead,#contact .socials { color:#dfc9a8; }
+    #contact::before,#contact::after { display:none; }
+    #contact .button.primary { color:#710916; background:#ead9bb; }
+    footer { width:min(92%,1120px); margin:24px auto; padding:22px 28px; color:#f0ddbd; border:0; border-radius:999px; background:#710916; }
+    @media (max-width:900px) { #intro>* { max-width:60%; } #intro::before { right:22px; width:34%; } #intro::after { right:calc(17% - 80px); width:160px; font-size:3.5rem; } #experience .timeline { grid-template-columns:1fr; } }
+    @media (max-width:820px) { section,#experience,#intro,#contact { width:calc(100% - 28px); margin:18px auto; padding:64px 28px; border-radius:28px; } .about { grid-template-columns:1fr; } .profile { max-width:420px; } .project { grid-template-columns:1fr; } }
+    @media (max-width:680px) { header { top:8px; width:calc(100% - 20px); } nav.open { top:58px; padding:12px 20px 18px; border:0; border-radius:22px; background:#710916; } nav.open a { color:#f7ead2; } #intro { min-height:720px; padding:58px 25px 310px; } #intro>* { max-width:100%; } #intro::before { top:auto; left:22px; right:22px; bottom:22px; width:auto; height:260px; } #intro::after { top:auto; right:50%; bottom:68px; width:128px; translate:50% 0; font-size:2.8rem; } #intro .hero-copy { max-width:100%; } h1 { font-size:clamp(2.8rem,15vw,4rem); } .stats { gap:16px !important; } .tools { padding:22px; } .project-art { min-height:220px; } footer { border-radius:26px; } }
+    /* Floral notebook collage variant */
+    :root { --ink:#4a302a; --muted:#79665c; --brown:#6d4d2a; --rust:#b85759; --sage:#8e9b45; --mint:#d9d7a7; --rose:#e8a29a; --lavender:#aa8292; --gold:#d3ad65; --cream:#f7f0df; --sand:#efe2cb; --line:#cbbda6; --display:'Fraunces',serif; --body:'Manrope',sans-serif; --mono:'DM Mono',monospace; }
+    body { color:var(--ink); background:#f7f0df; background-image:radial-gradient(rgba(109,77,42,.08) .7px,transparent .7px); background-size:5px 5px; }
+    body::before { display:block; opacity:.14; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E"); mix-blend-mode:multiply; }
+    h1,h2,h3,h4 { font-family:var(--display); letter-spacing:-.035em; }
+    header { position:sticky; top:12px; width:min(92%,1120px); margin:0 auto; color:#fff7e7; border:0; border-radius:999px; background:#6d4d2a; box-shadow:0 5px 0 rgba(142,155,69,.35); }
+    .nav { min-height:58px; padding-inline:25px; }
+    .logo { color:#fff7e7; font-family:var(--display); font-style:italic; }
+    .logo svg { display:none; }
+    nav { gap:8px; }
+    nav a { padding:8px 13px; color:#fff4df; border-radius:999px; font-size:.68rem; }
+    nav a:hover { color:#6d4d2a; background:#f3dca6; }
+    .nav-cta,.button.primary { color:#fff7e7; border:0; border-radius:999px; background:#b85759; box-shadow:3px 3px 0 #8e9b45; }
+    .nav-cta:hover,.button.primary:hover { color:#fff; background:#98454b; box-shadow:1px 1px 0 #8e9b45; }
+    section { max-width:1120px; margin:24px auto; padding:96px 60px; border-radius:0; }
+    #intro { max-width:1120px; min-height:730px; margin:36px auto 0; padding:115px 62px; color:var(--ink); border:0; border-radius:0; overflow:hidden; background:#f8f1e2; background-image:linear-gradient(rgba(184,87,89,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(184,87,89,.055) 1px,transparent 1px); background-size:24px 24px; box-shadow:0 14px 35px rgba(91,64,43,.12); }
+    #intro::before { content:""; position:absolute; right:60px; top:65px; width:390px; height:520px; border:0; outline:0; border-radius:50% 45% 52% 43%; background:radial-gradient(ellipse at 35% 25%,#fff2e5 0 8%,transparent 9%),radial-gradient(ellipse at 70% 30%,#e9aaa3 0 23%,transparent 24%),radial-gradient(ellipse at 35% 62%,#c46a6d 0 25%,transparent 26%),radial-gradient(ellipse at 70% 72%,#f1b1a7 0 26%,transparent 27%),#9aa34e; box-shadow:none; transform:rotate(-7deg); filter:saturate(.88); }
+    #intro::after { content:"Ayla"; right:105px; top:210px; width:280px; aspect-ratio:auto; padding:35px 22px; color:#6d4d2a; border:0; border-radius:0; background:rgba(248,241,226,.88); box-shadow:7px 8px 0 rgba(109,77,42,.18); transform:rotate(2deg); translate:0; font:italic 600 4.6rem/1 var(--display); letter-spacing:-.06em; }
+    #intro>* { max-width:54%; }
+    #intro .status { color:#6d4d2a; border:1px solid #c6af8d; border-radius:3px; background:#f3dca6; font-family:var(--mono); transform:rotate(-1deg); }
+    #intro .dot { background:#8e9b45; box-shadow:0 0 0 3px rgba(142,155,69,.2); }
+    h1 { color:#50362f; font-family:var(--display); font-size:clamp(3.2rem,6.5vw,5.8rem); font-weight:600; line-height:.94; text-transform:none; }
+    h1 em { color:#a2454d; font-family:var(--display); font-style:italic; background:linear-gradient(transparent 74%,#efc2b6 74%); }
+    .hero-copy,#intro .stats { color:#765f55; }
+    #intro .stats strong { color:#8f4548; font-family:var(--display); }
+    .button { font-family:var(--mono); border-radius:999px; }
+    .divider { display:block; position:relative; width:min(1120px,100%); height:56px; margin:-27px auto 0; z-index:2; padding:0; border:0; background:repeating-linear-gradient(90deg,transparent 0 25px,#6a6259 25px 29px,transparent 29px 48px); }
+    .divider::before,.divider::after { content:""; position:absolute; inset-inline:0; height:8px; border-top:2px solid #6a6259; border-bottom:2px solid #6a6259; }
+    .divider::before { top:12px; } .divider::after { bottom:12px; }
+    .divider svg { display:none; }
+    .eyebrow { color:#8e9b45; font-family:var(--mono); font-size:.7rem; font-style:normal; font-weight:500; letter-spacing:.13em; text-transform:uppercase; }
+    .eyebrow::before { width:16px; height:16px; border-radius:50% 50% 45% 55%; background:#b85759; }
+    #about { padding-top:105px; background:#f3eadb; }
+    #about::before { display:block; content:"PERSONAL NOTES / VOL. 01"; top:44px; left:auto; right:60px; translate:0; padding:6px 14px; color:#6d4d2a; border:1px solid #aa9270; background:#f4dfa8; box-shadow:3px 3px 0 #8e9b45; font:.61rem var(--mono); transform:rotate(1.2deg); }
+    .about { grid-template-columns:310px 1fr; gap:55px; }
+    .profile { padding:18px; border:1px solid #a79276; border-radius:2px; background:#e8d9c1; box-shadow:8px 9px 0 #a2454d; transform:rotate(-1deg); }
+    .profile::before { content:"ayla, lately"; left:20px; top:-14px; padding:6px 11px; color:#fff6e7; border-radius:0; background:#8e9b45; font:italic 600 .85rem var(--display); transform:rotate(-2deg); }
+    .portrait { border:8px solid #fff9ea; border-radius:1px; background:linear-gradient(145deg,#d98b86,#9d4d55); box-shadow:2px 3px 8px rgba(71,44,31,.18); }
+    .portrait::before { content:"AN"; color:#fff3df; font:italic 600 4.6rem/1 var(--display); }
+    .portrait::after { content:"ADD A FAVOURITE PHOTO HERE"; color:#f8dec3; font:.5rem var(--mono); }
+    .info { border-color:#c5b396; }
+    .info small { color:#8f4548; font-family:var(--mono); }
+    .about h2 { color:#5a3d32; font-weight:600; }
+    .about p em { color:#a2454d; }
+    .personal-note { padding:17px 20px; color:#fff7e8 !important; border-radius:1px; background:#a2454d; box-shadow:5px 5px 0 #8e9b45; font-family:var(--display); font-style:italic; font-size:1.02rem; font-weight:500; transform:rotate(.4deg); }
+    .now li { padding:12px 14px; border:1px solid #c8b596; border-radius:2px; background:#faf3e6; }
+    .now li::before { background:#8e9b45; }
+    .tools { padding:30px; border:1px solid #ae9878; outline:0; border-radius:2px; background:#fffaf0; background-image:linear-gradient(rgba(142,155,69,.08) 1px,transparent 1px); background-size:100% 29px; box-shadow:7px 8px 0 #b85759; transform:rotate(-.3deg); }
+    .tools strong { color:#8f4548; font-family:var(--mono); }
+    .tools .chips li,.chips li { color:#51382f; border:1px solid #bda98a; border-radius:999px; background:#f3dfa9; }
+    #experience { max-width:1120px; padding:100px 60px; color:#49332c; border:0; border-radius:0; background:#efe1cb; background-image:linear-gradient(90deg,transparent 49px,#d69791 49px,#d69791 51px,transparent 51px); }
+    #experience h2,#experience h3,#experience h4 { color:#5a3c32; }
+    #experience .eyebrow,#experience .org,#experience .label { color:#8e9b45; }
+    #experience .timeline { display:block; padding-left:36px; border-left:2px solid #8e9b45; }
+    #experience .role { margin-bottom:20px; padding:26px 30px; border:1px solid #bba686; border-radius:2px; background:#fff8e9; box-shadow:6px 7px 0 rgba(184,87,89,.55); }
+    #experience .role:nth-child(even) { transform:rotate(.35deg); }
+    #experience .role::before { display:block; left:-43px; top:31px; border-color:#b85759; background:#f7f0df; }
+    #experience .role p,#experience .role ul { color:#765f55; }
+    #experience .meta span { color:#fff8e7; border:0; border-radius:2px; background:#a2454d; transform:none; }
+    .education,#experience .more article { border:1px solid #b9a381; border-radius:2px; background:#fff8e9; box-shadow:5px 6px 0 #8e9b45; }
+    #experience .education h3,#experience .more h4 { color:#5a3c32; }
+    #experience .education p,#experience .more p,#experience .more .mono { color:#766055; }
+    #projects { padding-top:105px; background:#f7f0df; }
+    #projects::before { display:block; content:"SELECTED WORK / FROM MY DESK"; top:50px; left:60px; right:auto; color:#8f4548; border-bottom:1px solid #8f4548; font:.62rem var(--mono); }
+    .projects { gap:42px; }
+    .project { overflow:visible; border:0; border-radius:2px; background:#f0e1ca; box-shadow:8px 9px 0 rgba(109,77,42,.18); }
+    .project:nth-child(even) { transform:rotate(.45deg); }
+    .project:hover { transform:translateY(-4px) rotate(0); box-shadow:9px 11px 0 rgba(109,77,42,.2); }
+    .project:first-child::before { display:block; width:90px; height:24px; left:44%; top:-12px; background:rgba(211,173,101,.65); }
+    .project-art { min-height:290px; margin:20px; border:8px solid #fff8e9; outline:1px solid #ad987a; border-radius:1px; background:linear-gradient(145deg,#b85759,#8b4751); box-shadow:3px 4px 0 rgba(74,48,42,.18); }
+    .project:nth-child(2) .project-art { background:linear-gradient(145deg,#8e9b45,#626e31); }
+    .project:nth-child(3) .project-art { background:linear-gradient(145deg,#866244,#543a27); }
+    .project-art::after { color:#fff0d8; font-family:var(--mono); }
+    .project-body { padding:32px 38px 32px 18px; }
+    .project-meta span { color:#fff7e7; border-radius:2px; background:#a2454d; }
+    .project h3 { color:#5a3c32; font-family:var(--display); font-size:1.55rem; }
+    .tagline { color:#8f4548; font-family:var(--display); font-style:italic; }
+    #projects>.sub .more article { border:1px solid #b49d7c; border-radius:2px; background:#fff8e9; box-shadow:5px 6px 0 #8e9b45; }
+    #contact { max-width:1120px; padding:105px 60px; color:#fff2de; border:0; border-radius:0; background:#a2454d; background-image:radial-gradient(circle at 12% 20%,rgba(244,223,168,.18) 0 5%,transparent 5.5%),radial-gradient(circle at 88% 74%,rgba(142,155,69,.3) 0 8%,transparent 8.5%); }
+    #contact h2 { color:#fff4df; font-family:var(--display); font-style:italic; }
+    #contact .eyebrow { color:#e1d899; }
+    #contact .eyebrow::before { background:#e1d899; }
+    #contact .lead,#contact .socials { color:#f3d9c5; }
+    #contact::before,#contact::after { display:block; content:"✦"; top:70px; color:#e5d889; font-size:2rem; }
+    #contact .button.primary { color:#6d4d2a; background:#f3dfa9; box-shadow:4px 4px 0 #8e9b45; }
+    footer { width:min(1120px,92%); margin:22px auto; padding:24px 28px; color:#fff0dc; border:0; border-radius:0; background:#6d4d2a; }
+    @media (max-width:900px) { #intro>* { max-width:60%; } #intro::before { right:20px; width:35%; } #intro::after { right:35px; width:250px; font-size:3.8rem; } }
+    @media (max-width:820px) { section,#experience,#intro,#contact { width:calc(100% - 28px); margin:18px auto; padding:70px 28px; } .about { grid-template-columns:1fr; } .profile { max-width:420px; } .project { grid-template-columns:1fr; transform:none !important; } .project-body { padding:26px; } .project-art { margin-bottom:0; } }
+    @media (max-width:680px) { header { top:8px; width:calc(100% - 20px); } nav.open { top:58px; padding:12px 20px 18px; border:0; border-radius:3px; background:#6d4d2a; } nav.open a { color:#fff4df; } #intro { min-height:760px; padding:62px 25px 330px; } #intro>* { max-width:100%; } #intro::before { top:auto; left:20px; right:20px; bottom:24px; width:auto; height:280px; } #intro::after { top:auto; right:42px; bottom:96px; width:230px; padding:25px 15px; font-size:3.5rem; } #intro .hero-copy { max-width:100%; } h1 { font-size:clamp(3rem,15vw,4.2rem); } .divider { height:44px; } #about::before { right:28px; } .tools { padding:22px; transform:none; } #projects::before { left:28px; } .project-art { min-height:220px; } #contact::before,#contact::after { display:none; } }
+  </style>
+</head>
+<body>
+  <header><div class="nav wrap">
+    <a class="logo" href="#intro"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="#cbd5bb"/></svg>A.N.</a>
+    <nav id="site-nav"><a href="#intro">01 Intro</a><a href="#about">02 About</a><a href="#experience">03 Experience</a><a href="#projects">04 Projects</a><a class="nav-cta" href="#contact">Get in touch</a></nav>
+    <button class="menu" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></header>
+
+  <main>
+    <section id="intro">
+      <div class="status reveal"><span class="dot"></span>Open to research & internship roles</div>
+      <h1 class="reveal">Hi, I'm Ayla. I make <em>engineering</em> feel human.</h1>
+      <p class="hero-copy reveal">I'm Ayla Nasir, a Chemical Engineering & Bioengineering student at McMaster University. I move between reactor design and the biological systems it's meant to serve — from water treatment to accessible medical devices — and I like problems that don't respect the line between the two.</p>
+      <div class="actions reveal"><a class="button primary" href="#projects">See the work <span aria-hidden="true">→</span></a></div>
+      <div class="stats reveal"><div><strong>1,400+</strong>Volunteer hours</div><div><strong>10+</strong>Leadership roles led</div><div><strong>3</strong>Engineering design projects</div></div>
+    </section>
+    <div class="divider" aria-hidden="true"><svg viewBox="0 0 1120 28"><path d="M0 14h430M690 14h430" stroke="#e2d3bc"/><circle cx="465" cy="14" r="4" fill="#cbd5bb" stroke="#61765a"/><path d="M556 6l3 6.5 6.5 3-6.5 3-3 6.5-3-6.5-6.5-3 6.5-3z" fill="#fbf7ef" stroke="#c98a9c" stroke-width="1.1"/><circle cx="655" cy="14" r="4" fill="#cbd5bb" stroke="#b3a1cf"/><path d="M471 14h74M626 14h74" stroke="#c98a9c"/></svg></div>
+
+    <section id="about"><div class="eyebrow reveal">About</div><div class="about">
+      <aside class="profile reveal"><div class="portrait" aria-label="Ayla Nasir portrait placeholder"></div><div class="info"><small>Based in</small><span>Greater Toronto Area</span></div><div class="info"><small>Pronouns</small><span>She/Her</span></div><div class="info"><small>Studying</small><span>Chem. Eng. & Bioengineering (Co-op), McMaster</span></div><div class="info"><small>Currently</small><span>Researcher, The Student Water Project</span></div><div class="info"><small>Focus</small><span>Water treatment, accessible design, bioengineering</span></div></aside>
+      <div class="reveal"><h2>I think in <em>mechanisms</em> — whether the reactor is stainless steel or a cell wall.</h2><p>I'm drawn to the seams between disciplines: the point where a materials trade-off in a design course turns out to matter just as much for a water filter serving a real community as it does on paper. <em>I don't pick a side between the engineering and the people it's for</em> — I want to understand both well enough to move between them without losing precision.</p><p>That habit started before McMaster — four years leading a DECA chapter back from the edge of closure, sitting on my district's Student Senate, and mentoring incoming students through Link Crew taught me how to turn a plan into something that actually works for people. I bring the same instinct to engineering now: I care about getting the numbers right, so I back every design with data, trade-off analysis, and a method someone else could rerun.</p><p class="personal-note">The short version: I like technical work, I like people, and I'm happiest when a project lets me care about both.</p>
+        <ul class="now"><li>Researching UV water purification and co-authoring public science articles with The Student Water Project</li><li>Training with the braking sub-team for McMaster's AIChE Chem-E-Car competition</li><li>Finishing Level 2 of my B.Eng. in Chemical Engineering & Bioengineering at McMaster</li></ul>
+        <div class="tools"><div><strong>Laboratory techniques</strong><ul class="chips"><li>Acid-base titration</li><li>UV-Vis spectrophotometry</li><li>Gravimetric / vacuum filtration</li><li>Calorimetry</li><li>Galvanic cell assembly</li></ul></div><div><strong>Software & programming</strong><ul class="chips"><li>SolidWorks</li><li>GRANTA</li><li>Python</li><li>MATLAB</li><li>Java</li><li>Excel</li></ul></div><div><strong>Certifications & safety</strong><ul class="chips"><li>WHMIS</li><li>Health & Safety</li><li>SAFE</li><li>Chemical Handling & Spills</li><li>Gas Cylinder Safety</li></ul></div><div><strong>Coursework</strong><ul class="chips"><li>Project Design (1P13)</li><li>Materials & Manufacturing</li><li>Chemical Process Principles</li><li>Bioengineering Foundations</li></ul></div></div>
+      </div></div></section>
+
+    <section id="experience"><div class="section-title reveal"><div><div class="eyebrow">Experience</div><h2>What I've worked on, in order.</h2></div></div><div class="timeline">
+      <article class="role reveal"><div class="meta"><span>July 2026 – Present</span><span>Remote</span><span>Research & Writing</span></div><h3>Scientific Research Writer · <span class="org">The Student Water Project</span></h3><p>Supporting TSWP's global mission for UV purification access through applied water-treatment research.</p><ul><li>Synthesize chemical and bioengineering research into published water technology articles.</li><li>Co-author weekly public articles on microbiology, UV, and sustainable water systems.</li><li>Integrate technical feedback from biology and chemical engineering PhD mentors.</li></ul></article>
+      <article class="role reveal"><div class="meta"><span>Aug 2026 – Present</span><span>Hamilton, ON</span><span>In Training</span></div><h3>Braking Sub-Team Member · <span class="org">McMaster Chem-E-Car Team</span></h3><p>Working with the braking sub-team on McMaster's entry to the AIChE Chem-E-Car competition — a small chemically powered vehicle that must stop at a precise, unannounced distance.</p><ul><li>Completing technical training in chemical braking-system design and testing.</li><li>Building knowledge of reaction selection, equilibrium calculations, and solution preparation.</li><li>Learning experimental testing and data analysis for braking-reaction optimization.</li></ul></article>
+      <article class="role reveal"><div class="meta"><span>Sept 2024 – June 2025</span><span>Barrie, ON</span><span>Chapter President</span></div><h3>Chapter President · <span class="org">DECA, Bear Creek Secondary School</span></h3><p>Oversaw all chapter initiatives after two years competing and one year as Chapter VP, revitalizing a chapter that had been at risk of closure.</p><ul><li>Grew chapter membership 76% through a targeted recruitment strategy across class visits, club fairs, and school assemblies.</li><li>Secured $3.4K in fundraising to subsidize competition fees, transportation, and related costs.</li><li>Redesigned the mentorship and training program, driving a 96% provincial qualification rate and 3 international qualifiers.</li></ul></article>
+    </div>
+    <div class="sub reveal"><span class="label">Education</span><div class="education"><h3>B.Eng.Biosci., Chemical Engineering & Bioengineering (Co-op)</h3><p>McMaster University · Hamilton, ON · Sept 2025 – Present</p></div></div>
+    <div class="sub reveal"><span class="label">Honours & Awards</span><div class="more">
+      <article><span class="mono">2025</span><h4>Citizenship Award</h4><p>Bear Creek Secondary School — for 1,400+ volunteer hours outside of school.</p></article>
+      <article><span class="mono">2025</span><h4>Academic Excellence Award</h4><p>Bear Creek Secondary School — Honour Roll all four years; Ontario Scholar.</p></article>
+      <article><span class="mono">2025</span><h4>Extracurricular & Leadership Award</h4><p>Bear Creek Secondary School — active across 10+ clubs spanning the arts, sciences, athletics, and leadership.</p></article>
+    </div></div>
+    <div class="sub reveal"><span class="label">Leadership & Community</span><div class="more">
+      <article><span class="mono">2024–25</span><h4>Student Senator</h4><p>SCDSB Student Senate — proposed and helped implement a district-wide Mental Health Awareness Act.</p></article>
+      <article><span class="mono">2024–25</span><h4>Co-Founder</h4><p>HOSA Chapter, Bear Creek — built the club from proposal through to sustainable operation.</p></article>
+      <article><span class="mono">2021–24</span><h4>Assistant Stage Manager</h4><p>School musicals — ran backstage cues and prop operations for audiences of 1,000+.</p></article>
+      <article><span class="mono">2023–25</span><h4>Grade 9 Orientation Mentor</h4><p>Link Crew — supported incoming students through orientation and year-round mentorship.</p></article>
+      <article><span class="mono">2024</span><h4>Camp & Youth Leader</h4><p>City of Barrie — led daily programming for 20–30 children; mentored at-risk youth ages 11–17.</p></article>
+      <article><span class="mono">2021–Present</span><h4>Youth Volunteer & Teaching Assistant</h4><p>AMJ Community — taught weekly classes; supported an international interfaith conference in the UK.</p></article>
+    </div></div>
+    </section>
+
+    <section id="projects"><div class="section-title reveal"><div><div class="eyebrow">Projects</div><h2>Things I've built and tested.</h2></div></div><div class="projects">
+      <article class="project reveal"><div class="project-art"><svg width="105" height="105" viewBox="0 0 90 90" fill="none" aria-hidden="true"><circle cx="45" cy="45" r="7" fill="#cbd5bb"/><g fill="white" opacity=".8"><circle cx="19" cy="24" r="5"/><circle cx="71" cy="24" r="5"/><circle cx="19" cy="66" r="5"/><circle cx="71" cy="66" r="5"/></g><g stroke="white" opacity=".55"><path d="m45 45-26-21M45 45l26-21M45 45 19 66M45 45l26 21"/></g></svg></div><div class="project-body"><div class="project-meta"><span>01</span><span>2026</span><span class="active">Completed</span></div><h3>Water Treatment & Filtration System Design</h3><div class="tagline">Balanced durability, cost, and carbon impact in a lifecycle eco-audit for a community filtration system</div><p>Designed a wastewater filtration system for a community near a nuclear facility as part of McMaster's 1P13 Engineering Design course. Calculated filter porosity and compared candidate materials using GRANTA software and Ashby charts, then completed a full lifecycle eco-audit weighing durability, cost, and carbon impact to select the final material.</p><ul class="chips"><li>GRANTA</li><li>Ashby Charts</li><li>Eco-Audit</li><li>Filter Porosity</li></ul></div></article>
+      <article class="project reveal"><div class="project-art"><svg width="105" height="105" viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="M12 45Q28 18 45 45t33 0M12 45q16 27 33 0t33 0" stroke="white" stroke-width="2" opacity=".8"/><circle cx="45" cy="45" r="4" fill="#cbd5bb"/></svg></div><div class="project-body"><div class="project-meta"><span>02</span><span>2026</span><span>Completed</span></div><h3>StrokeZero</h3><div class="tagline">A motorized paintbrush cleaner that cleans in ~8 seconds, built for artists with limited hand mobility</div><p>Prototyped StrokeZero, a motorized paintbrush cleaner designed for artists with limited hand mobility, cleaning brushes in roughly 8 seconds. Iterated through multiple prototypes against a structured testing plan and reduced the estimated unit cost to about $18 through materials analysis and selection.</p><ul class="chips"><li>CAD</li><li>Prototyping</li><li>Materials Analysis</li><li>Structured Testing</li></ul></div></article>
+      <article class="project reveal"><div class="project-art"><svg width="105" height="105" viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="m45 5 35 20v40L45 85 10 65V25L45 5Z" stroke="white" opacity=".8"/><circle cx="45" cy="45" r="11" fill="#cbd5bb"/></svg></div><div class="project-body"><div class="project-meta"><span>03</span><span>2025–26</span><span>Completed</span></div><h3>Robotic End-Effector System</h3><div class="tagline">A 3D-printed robotic claw paired with Python-driven inventory tools for automated warehouse packing</div><p>Designed and 3D-printed a gear-driven claw for an automated warehouse packing system, improving grip performance by testing and refining claw shapes and materials. Integrated a Python program to handle barcode scanning, product lookup, and invoice generation.</p><ul class="chips"><li>SolidWorks</li><li>3D Printing</li><li>Python</li><li>Iterative Design</li></ul></div></article>
+    </div><div class="sub reveal"><span class="label">More work</span><div class="more"><article><span class="mono">2026</span><h4>Accessibility-Focused Writing Interface</h4><p>Web-based writing tool for users with dexterity or speech impairments, featuring text-to-speech output and adaptive vocabulary mapping.</p></article></div></div></section>
+
+    <section id="contact"><div class="eyebrow reveal">Contact</div><h2 class="reveal">Have a project, lab, or role worth talking about?</h2><p class="lead reveal">I'm currently looking for research and internship opportunities at the intersection of chemical engineering and bioengineering. Reach out — I read everything.</p><div class="actions reveal" style="justify-content:center"><a class="button primary" href="mailto:nasira20@mcmaster.ca">Email me <span aria-hidden="true">→</span></a></div><div class="socials reveal"><a href="https://www.linkedin.com/in/ayla-nasir" target="_blank" rel="noopener">LinkedIn</a></div></section>
+  </main>
+  <footer><div class="footer"><span>© <span id="year"></span> Ayla Nasir</span><span>Built with HTML & CSS</span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); } }), { threshold:.12 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    const menu = document.querySelector('.menu');
+    const nav = document.querySelector('#site-nav');
+    menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', open); });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }));
+  </script>
+</body>
+</html>
